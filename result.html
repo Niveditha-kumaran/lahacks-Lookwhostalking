@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<style>
+ 
+  
+
+
+	h1{text-align: center;
+font-family:georgia;
+font-size:300%;
+  color:indigo;}
+ h3{
+  font-size:100%;
+  color:red;}
+
+</style>
+</head>
+
+<body>
+<img src="../static/img/graphres.jpg" class="jpg" fill="white" height="150" width="150">
+<h1>Let's check the value of the speech in every domain</h1> 
+
+<h2 style="text-align: center">Your Data</h2>
+ <h2>{{wor}}</h2>
+
+<div class="center-on-page">
+<!--<h2><img src="{{ imgval }}" class="jpg" fill="white" height="100" width="100">-->
+  {% set i1="../static/img/anger.jpg"%}
+  {% set i2="../static/img/disapproval.jpg"%}
+  {% set i3="../static/img/joy.jpg"%}
+  {% set i4="../static/img/neutral.jpg"%}
+  {% set i5="../static/img/optimism.jpg"%}
+
+    <h3>ANGER</h3>
+    <h3>{{a}}</h3>
+   <img src="{{ i1 }}" class="jpg" fill="white" height="100" width="100">
+    <h3>DISAPPROVAL</h3>
+     <h3>{{d}}</h3>
+   <img src="{{ i2 }}" class="jpg" fill="white" height="100" width="100"> 
+    <h3>JOY</h3>
+     <h3>{{j}}</h3>
+    <img src="{{ i3 }}" class="jpg" fill="white" height="100" width="100">
+    <h3>NEUTRAL</h3>
+     <h3>{{n}}</h3>
+    <img src="{{ i4 }}" class="jpg" fill="white" height="100" width="100">
+    <h3>OPTIMISM</h3>
+     <h3>{{o}}</h3>
+   <img src="{{ i5}}" class="jpg" fill="white" height="100" width="100" > 
+    	
+  
+ 
+ 
+
+   
+
+</div>
+
+<img src="../static/img/resup.jpg" class="jpg" fill="white" height="300" width="300" align="right">
+</body>
+</html>
