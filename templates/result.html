@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<style>
+ 
+  
+
+
+	h1{text-align: center;
+font-family:georgia;
+font-size:300%;
+  color:indigo;}
+ h3{
+  font-size:140%;
+  color:red;}
+
+</style>
+</head>
+
+<body>
+
+<h1>Let's check the value of the speech in every domain</h1> 
+
+<h2 style="text-align: center">Your Data</h2>
+ <h2 style="text-align: center">{{wor}}</h2><br/>
+ <h3 style="text-align: center"> Sentiment Magnitude: {{magnitude}}</h3>
+ <h3 style="text-align: center"> Sentiment Score: {{score}}</h3>
+ <h3 style="text-align: center"> Speed(Words per minute): {{speed}}</h3>
+<br/>
+<div class="center-on-page">
+<!--<h2><img src="{{ imgval }}" class="jpg" fill="white" height="100" width="100">-->
+  {% set i1="../static/img/anger.jpg"%}
+  {% set i2="../static/img/disapproval.jpg"%}
+  {% set i3="../static/img/joy.jpg"%}
+  {% set i4="../static/img/neutral.jpg"%}
+  {% set i5="../static/img/optimism.jpg"%}
+
+    <h3 style="text-align: center">ANGER</h3>
+    <h3 style="text-align: center">{{a}}</h3>
+    <div style="display: flex; justify-content: center;">
+ 
+   <img src="{{ i1 }}" class="jpg" fill="white" height="175" width="175" align="middle">
+</div>
+
+    <h3 style="text-align: center">DISAPPROVAL</h3>
+     <h3 style="text-align: center">{{d}}</h3>
+  
+<div style="display: flex; justify-content: center;">
+  
+   <img src="{{ i2 }}" class="jpg" fill="white" height="175" width="175" align="middle"> 
+</div>
+    <h3 style="text-align: center">JOY</h3>
+     <h3 style="text-align: center">{{j}}</h3>
+
+     <div style="display: flex; justify-content: center;">
+ 
+    <img src="{{ i3 }}" class="jpg" fill="white" height="175" width="175" align="middle"></div>
+
+    <h3 style="text-align: center">NEUTRAL</h3>
+     <h3 style="text-align: center">{{n}}</h3>
+    
+<div style="display: flex; justify-content: center;">
+  
+    <img src="{{ i4 }}" class="jpg" fill="white" height="175" width="175" align="middle">
+</div>
+    <h3 style="text-align: center">OPTIMISM</h3>
+     <h3 style="text-align: center">{{o}}</h3>
+
+     <div style="display: flex; justify-content: center;">
+  
+   <img src="{{ i5}}" class="jpg" fill="white" height="175" width="175" align="middle"> </div>
+    	
+  
+ 
+ 
+
+   
+
+</div>
+<h2 style="text-align: center">Good Job! Your pace is </h2><h2 style="text-align: center">{{speed}}</h2><br><h1 style="text-color: orange"> Good talk!</h1>
+
+</body>
+</html>

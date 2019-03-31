@@ -1,0 +1,45 @@
+
+<!doctype html>
+<html>
+<head>
+
+<title> Look who's Talking</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<style> 
+body {
+  background-image: url(../static/img/speechgreen.jpg) ;
+  background-repeat:no-repeat; 
+  background-size:cover;  
+  
+}
+
+h1{text-align: center;
+font-family:georgia;
+font-size:600%;
+  color:#FFFFFF;}
+ h3{text-align:center;
+  font-family:courier new;
+  font-size:200%;
+  color:yelllow;}
+  
+</style>
+</head>
+
+<body >
+ 
+<h1>Look Who's Talking</h1>
+<h3> Insert your audio clip, and check out it's variations</h3>
+
+<form class="form-inline" action="{{url_for('result')}}" method="post">
+  
+  <button type="submit">Click to record!</button><br>
+</form>
+</body>
+
+</html>
+
+
+
+
+
